@@ -2,20 +2,16 @@ import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
 
-import Index from '../pages/Index.vue';
-import ThemeList from '../pages/ThemeList.vue';
-import Article from '../pages/Article.vue';
+import PageA from '../pages/PageA.vue'
+import PageB from '../pages/PageB.vue'
 
 var routes=[
 		{
-			path:"/",
-			component:Index
+			path:"/a",
+			component:PageA
 		},{
-			path:"/themeList",
-			component:ThemeList
-		},{
-			path:"/article",
-			component:Article
+			path:"/b",
+			component:PageB
 		}
 	]
 
