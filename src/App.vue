@@ -9,12 +9,20 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
 	name:"app",
 	data(){
 		return {
+			a:1,
+			b:1,
+			list:[]
 		}
+	},
+	mounted(){
+		axios("http://127.0.0.1:9999/api/3/section/1").then((res)=>{
+			console.log(res.data);
+		})
 	},
 	methods:{
 		toB(){
