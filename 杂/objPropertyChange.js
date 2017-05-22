@@ -20,15 +20,12 @@ var obj={
 // 		return value+"1";
 // 	}
 // })
-// Object.defineProperties(obj,{
-// 	'a':{
-// 		value:"",
-// 		set(value){
-// 			console.log(value);
-// 		}
-// 	}
-// })
+Object.defineProperty(obj, 'a', {
+    set: function(value) {
+        console.log("change",value);
+    }
+});
 
-// obj.a="2";
-// console.log(obj.a);
+obj.a="2";
+console.log(obj.a);
 
