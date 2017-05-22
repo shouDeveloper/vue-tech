@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>路由原理</title>
+</head>
+<body>
+	<button id="b1">pushState</button>
+	<button id="b2">replaceState</button>
+	<a href="#test">change hash</a>
+</body>
+<script>
+	document.getElementById("b2").addEventListener("click",()=>{
+		let href=window.location.href;
+		window.history.replaceState(null,null,`replaceState`)
+	})
+	document.getElementById("b1").addEventListener("click",()=>{
+		let href=window.location.href;
+		window.history.pushState(null,null,`newState`)
+	})
+	window.addEventListener("hashchange",()=>{
+		console.log("changeHash");		
+	})
+	window.addEventListener("popstate",()=>{
+		console.log("浏览器前进或者返回");		
+	})
+</script>
+</html>
